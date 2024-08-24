@@ -1,0 +1,11 @@
+FROM ubuntu
+
+WORKDIR /rushi
+
+COPY . /rushi
+
+RUN sudo apt update -y &&  apt-get install -y python3 python3-pip
+
+ENV NAME World
+
+RUN ["python3","Python.py"]
